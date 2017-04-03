@@ -1,6 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
-
+import Router from 'next/router'
 import Header from '../components/Header'
 import { getUserFromCookie, getUserFromLocalStorage } from '../utils/auth'
 
@@ -24,15 +24,15 @@ export default Page => class DefaultPage extends React.Component {
 
   logout (eve) {
     if (eve.key === 'logout') {
-      this.props.url.pushTo(`/?logout=${eve.newValue}`)
+      Router.push(`/?logout=${eve.newValue}`)
     }
   }
 
-  componentDidMount () {
+  componentDidMount() {
     window.addEventListener('storage', this.logout, false)
   }
 
-  componentWillUnmount () {
+  componentWillUnmount() {
     window.removeEventListener('storage', this.logout, false)
   }
 

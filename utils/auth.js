@@ -13,6 +13,8 @@ export const extractInfoFromHash = () => {
   if (!process.browser) {
     return undefined
   }
+
+  console.log(getQueryParams());
   const {id_token, state} = getQueryParams()
   return {token: id_token, secret: state}
 }
