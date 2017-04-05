@@ -8,6 +8,7 @@ export default class SignOff extends React.Component {
     unsetToken()
     logout()
   }
+
   render () {
     return null
   }

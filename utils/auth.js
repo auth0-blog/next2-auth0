@@ -14,7 +14,6 @@ export const extractInfoFromHash = () => {
     return undefined
   }
 
-  console.log(getQueryParams());
   const {id_token, state} = getQueryParams()
   return {token: id_token, secret: state}
 }
