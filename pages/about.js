@@ -2,13 +2,10 @@ import React from 'react'
 
 import defaultPage from '../hocs/defaultPage'
 
-const About = () => (
+const About = () =>
   <div>
     <h1>Nothing to see here.</h1>
-     { console.log("Browser", process.env.AUTH0_SECRET ) }
-    <p>
-      This is just a random page.
-    </p>
+    <p>This is just a random page.</p>
     <style jsx>{`
       h1 {
         font-size: 40px;
@@ -23,6 +20,5 @@ const About = () => (
       }
     `}</style>
   </div>
-)
 
 export default defaultPage(About)
